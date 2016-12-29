@@ -1,0 +1,1 @@
+webpackJsonp([1],[function(e,t,u){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}var n=u(1),a=l(n),d=new a.default("h1"),o=new a.default("p");d.text("hello world!"),o.text("build with webpack")}]);

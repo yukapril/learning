@@ -1,0 +1,1 @@
+webpackJsonp([0],[function(e,t,n){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}var l=n(1),o=u(l),s=new o.default("h1"),a=new o.default("p");s.text("hello world!"),a.text("this is second page")}]);
