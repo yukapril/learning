@@ -1,0 +1,13 @@
+.app{
+    margin: 0 auto;
+    width: 940px;
+}
+.app .title {
+    font-size: 2rem;
+}
+
+.block{
+    margin: .5rem 0;
+    padding: 1rem;
+    border: 2px solid #ccc;
+}

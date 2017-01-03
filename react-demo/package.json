@@ -1,25 +1,18 @@
 {
   "name": "react-demo",
-  "version": "1.0.0",
-  "description": "demo",
-  "dependencies": {},
-  "scripts": {
-    "build": "webpack",
-    "webpack": "webpack --watch"
-  },
-  "author": "yukapril",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
-    "babel-core": "^6.13.1",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.13.1",
-    "babel-preset-react": "^6.11.1",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "react": "^15.3.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "pushstate-server": "^2.1.0",
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "pushstate-server build"
   }
 }

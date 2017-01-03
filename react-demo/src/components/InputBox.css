@@ -1,0 +1,10 @@
+.input-box .input{
+    width: 20rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.input-box .show-text{
+    margin-top: .5rem;
+    font-weight: 900;
+}
