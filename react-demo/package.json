@@ -4,15 +4,16 @@
   "private": true,
   "devDependencies": {
     "pushstate-server": "^2.1.0",
-    "react-scripts": "0.8.4"
-  },
-  "dependencies": {
+    "react-scripts": "0.8.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
+  },
+  "dependencies": {
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "pushstate-server build"
+    "server": "pushstate-server build",
+    "webpack": "webpack"
   }
 }
