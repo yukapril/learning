@@ -1,15 +1,17 @@
 <template>
-  <div id="app" >
+  <div id="app">
     <div class="header">
       <img src="./assets/logo.png">
       <h1>{{ msg }}</h1>
     </div>
     <InputBox></InputBox>
+    <Counter></Counter>
   </div>
 </template>
 
 <script>
   import InputBox from './components/InputBox.vue';
+  import Counter from './components/Counter.vue';
   export default {
     name: 'app',
     data() {
@@ -18,7 +20,8 @@
       }
     },
     components: {
-      InputBox
+      InputBox,
+      Counter
     }
   }
 </script>
