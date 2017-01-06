@@ -1,0 +1,5 @@
+<view class="container">
+    <view>
+        <text>获取id:{{pid}}的git内容</text>
+    </view>
+</view>

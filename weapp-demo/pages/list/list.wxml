@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="title">
+        <text>{{title}}</text>
+    </view>
+    <view>
+        <text>{{status}}</text>
+    </view>
+    <view class="list">
+        <block wx:for="{{dataList}}" wx:for-item="item" wx:key="id">
+            <view class="item">
+                <!--<text class="no">{{index + 1}}</text>-->
+                <text class="name" data-pid="{{item.id}}" bindtap="viewDetail">{{item.name}}</text>
+                <text class="desc">{{item.description}}</text>
+                <view>
+                    <image class="img" mode="aspectFill" src="{{item.owner.avatar_url}}"></image>
+                    <text class="author">{{item.owner.login}}</text>
+                </view>
+                <view class="datas">
+                    <text class="count">
+                        <text class="type">Star:</text><text class="number">{{item.stargazers_count}}</text>
+                    </text>
+                    <text class="count">
+                        <text class="type">Fork:</text><text class="number">{{item.forks_count}}</text>
+                    </text>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
