@@ -11,6 +11,7 @@ module.exports = {
     resolve: {
         // 当require的模块找不到时，添加这些后缀再次查找
         extentions: ['js'],
+        // 建立require别名
         alias: {
             'say': './modules/say/1.0/say',
             'take': './modules/take/1.2/take',
