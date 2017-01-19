@@ -46,7 +46,7 @@ module.exports = function (source) {
     //console.log(this.request);//整个插件部分处理路径。如：strict-loader.js!demo_test_loaders/comment-loader.js?a=1&b=2!./demo_test_loaders/src/main.js
 
     var param = this.options['commentLoader'] || {};
-    var str = param.str || ''
+    var str = param.str || '';
     var file = path.parse(this.resourcePath);
     var ret = '\n//--------' + file.base + ' ' + str + '--------\n' + source + '\n//------------------------';
 

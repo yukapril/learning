@@ -44,27 +44,27 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict'
+	'use strict';
 
 	//--------main.js v1.0--------
-	var c = __webpack_require__(1);
-
-	var foo = () => {
+	var someComponent = __webpack_require__(1);
+	var foo = function () {
 	    console.log('hi');
 	};
-	c();
+	foo();
+	someComponent();
 	//------------------------
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	'use strict'
+	'use strict';
 
-	//--------test.js v1.0--------
-	module.exports = () => {
-	    console.log('components!');
-	}
+	//--------some-component.js v1.0--------
+	module.exports = function(){
+	    console.log('this is some-component');
+	};
 	//------------------------
 
 /***/ }
