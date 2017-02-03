@@ -59,8 +59,7 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	'use strict';
-
+	
 	//--------some-component.js v1.0--------
 	module.exports = function(){
 	    console.log('this is some-component');

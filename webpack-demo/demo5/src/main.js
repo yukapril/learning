@@ -1,4 +1,4 @@
-var someComponent = require('./some-component');
+var someComponent = require('./components/some-component');
 var foo = function () {
     console.log('hi');
 };
