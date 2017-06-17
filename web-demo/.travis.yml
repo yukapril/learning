@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+    - "6.1"
+env:
+    global:
+        - CODECOV_TOKEN: 
+install:
+    - npm install
+script:
+    - npm test
+    - npm run coverage
+    - cat ./coverage/coverage.json | node_modules/codecov.io/bin/codecov.io.js
