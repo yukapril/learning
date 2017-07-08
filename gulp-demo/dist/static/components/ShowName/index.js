@@ -1,0 +1,1 @@
+"use strict";Vue.component("show-name",{template:'\n    <div class="show-name">\n      <h2>Components Demo</h2>\n      <p>Hi, {{text}}!</p>\n      <solt>Welcome!</solt>\n    </div>\n  ',props:{name:{type:String,default:""}},data:function(){return{}},computed:{text:function(){return this.name.toUpperCase()}}});

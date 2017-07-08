@@ -1,0 +1,1 @@
+"use strict";!function(t){var e=window.Utils;new(0,window.Vue)({el:"#app",data:function(){return{title:"DEMO",memo:"hello world!",calculate:e.add(5,3),name:"test"}}})}(window);
