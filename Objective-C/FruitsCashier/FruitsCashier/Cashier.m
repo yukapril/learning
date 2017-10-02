@@ -19,7 +19,7 @@
 - (instancetype) initWithFruit: (NSArray<Fruit*>*) fruit {
     self = [super init];
     if(self) {
-        self.fruits = fruit;
+        _fruits = fruit;
     }
     return self;
 }
@@ -37,13 +37,11 @@
 
 - (CGFloat) checkout {
     CGFloat sum = 0;
-    for (Fruit* fruit in self.fruits) {
+    for (Fruit* fruit in _fruits) {
         CGFloat price = [self getDiscount:fruit];
         NSLog(@"商品: %@, 原价:%@, 现价:%@", fruit.name, @(fruit.price), @(price));
         sum += price;
     }
     return sum;
 }
-
-
 @end

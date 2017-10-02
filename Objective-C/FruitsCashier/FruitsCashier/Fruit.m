@@ -10,17 +10,17 @@
 
 @implementation Fruit
 
-- (instancetype) initWithNameAndPrice: (NSString*) name : (CGFloat) price {
+- (instancetype) initWithName: (NSString*) name price: (CGFloat) price {
     self = [super init];
     if(self) {
-        self.name = name;
-        self.price = price;
+        _name = name;
+        _price = price;
     }
     return self;
 }
 
 - (NSString*) say {
-   return self.name;
+   return _name;
 }
 
 

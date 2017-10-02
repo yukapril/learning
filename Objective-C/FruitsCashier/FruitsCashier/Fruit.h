@@ -13,7 +13,7 @@
 @property NSString* name;
 @property CGFloat price;
 
-- (instancetype) initWithNameAndPrice: (NSString*) name : (CGFloat) price;
+- (instancetype) initWithName: (NSString*) name price: (CGFloat) price;
 
 - (NSString*) say;
 
