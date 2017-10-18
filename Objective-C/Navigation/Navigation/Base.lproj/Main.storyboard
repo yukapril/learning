@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzh-b6-YL6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="POF-gP-VlA">
+            <objects>
+                <navigationController id="zzh-b6-YL6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K33-pr-RW0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kLK-Sd-S8O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqM-dw-jtp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-246" y="-1057"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvo-bK-joz">
+                                <rect key="frame" x="169.5" y="224" width="35" height="30"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="clickPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzh-Yd-ADf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-g7-weO">
+                                <rect key="frame" x="165.5" y="274" width="43" height="30"/>
+                                <state key="normal" title="Modal"/>
+                                <connections>
+                                    <action selector="clickModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZN-Pf-StJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vvo-bK-joz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="L8I-zx-HtM"/>
+                            <constraint firstItem="IrS-g7-weO" firstAttribute="top" secondItem="vvo-bK-joz" secondAttribute="bottom" constant="20" id="YM6-jh-KVv"/>
+                            <constraint firstItem="vvo-bK-joz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyJ-x4-cnE"/>
+                            <constraint firstItem="IrS-g7-weO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xdG-zz-AGO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wdh-gW-3DW"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="551" y="-1057"/>
+        </scene>
+    </scenes>
+</document>
