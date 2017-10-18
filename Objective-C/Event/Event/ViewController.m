@@ -31,13 +31,19 @@
     [self.view addSubview:view];
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 20)];
-    [label setText:@"tap here"];
+    [label setText:@"label - tap"];
     [label setTextColor:[UIColor whiteColor]];
     [view addSubview:label];
 
     label.userInteractionEnabled = YES;
     UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTouchUpInside:)];
     [label addGestureRecognizer:labelTapGestureRecognizer];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 80, 100, 50)];
+    [button setTitle:@"button - tap" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button addTarget:self action:@selector(button2TouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 - (void)labelTouchUpInside:(UITapGestureRecognizer *)recognizer {
@@ -46,6 +52,10 @@
 
 - (IBAction)buttonTouchUpInside:(id)sender {
     NSLog(@"tap button");
+}
+
+-(void)button2TouchUpInside:(id)sender {
+    NSLog(@"tap button2");
 }
 
 @end
