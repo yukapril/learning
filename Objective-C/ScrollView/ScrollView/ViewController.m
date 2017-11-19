@@ -58,7 +58,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 700);
+//    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 700);
     //    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width*5, 700);
     
 }

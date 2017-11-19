@@ -35,6 +35,7 @@
     [self presentViewController:targetViewController animated:YES completion:^{
         NSLog(@"modal complete!");
     }];
+    targetViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 }
 
 @end

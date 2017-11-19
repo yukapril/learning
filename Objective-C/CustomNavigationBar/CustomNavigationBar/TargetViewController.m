@@ -44,7 +44,7 @@
     self.navigationItem.titleView = titleView;
     
     // 滑动隐藏导航栏
-//    self.navigationController.hidesBarsOnSwipe = YES;
+    self.navigationController.hidesBarsOnSwipe = YES;
     // 点击隐藏导航栏
 //    self.navigationController.hidesBarsOnTap = YES;
     // 输入内容时候隐藏导航栏

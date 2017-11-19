@@ -32,8 +32,9 @@ static NSString *NORMAL_REUSE_ID = @"NormalTableViewCell";
     //                  @[@"Row 0", @"Row 1", @"Row 2", @"Row 3"]
     //                  ];
     //
-    //    // 设置分割线颜色
-    //    self.tableView.separatorColor = [UIColor magentaColor];
+    // 设置分割线颜色
+    self.tableView.separatorColor = [UIColor magentaColor];
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 50, 0, 0);
     
     MessageInfo *msgInfo = [[MessageInfo alloc]init];
     msgInfo.title = @"我的资产";
@@ -123,8 +124,12 @@ static NSString *NORMAL_REUSE_ID = @"NormalTableViewCell";
 }
 
 // 区域消息头
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return self.sections[section];
+//- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    return self.sections[section];
+//}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
 }
 
 // 区域消息尾
