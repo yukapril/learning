@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.15.3/axios.min.js"></script>
+</head>
+<body>
+<div>
+    <div>
+        <h1>DEMO 1</h1>
+        <p>简单跨域</p>
+        <button id="btn1">通过 axios 请求跨域信息</button>
+    </div>
+    <div>
+        <h1>DEMO 2</h1>
+        <p>复杂跨域</p>
+        <button id="btn2">通过 jquery 请求跨域信息</button>
+    </div>
+
+    <div>
+        <h1>DEMO 3</h1>
+        <p>带有 cookie 跨域</p>
+        <button id="btn3">通过 jquery 请求跨域登录</button>
+        <button id="btn4">通过 jquery 请求跨域信息</button>
+    </div>
+</div>
+
+<script>
+  $('#btn1').on('click', function () {
+    axios.get('http://localhost:3100/getData').then(function (res) {
+      alert(res.data.data)
+    })
+  })
+
+  $('#btn2').on('click', function () {
+    $.ajax({
+      url: 'http://localhost:3100/deleteData',
+      type: 'delete',
+      headers: {
+        'x-token': 'asdf',
+//        'x-qwer': 'haha'
+      }
+    }).then(function (json) {
+      alert(json.data)
+    })
+  })
+
+  $('#btn3').on('click', function () {
+    $.ajax({
+      url: 'http://localhost:3100/login',
+      type: 'post',
+      xhrFields: {
+        withCredentials: true
+      }
+    }).then(function (json) {
+      alert(json.data)
+    })
+  })
+
+  $('#btn4').on('click', function () {
+    $.ajax({
+      url: 'http://localhost:3100/loginedData',
+      type: 'post',
+      xhrFields: {
+        withCredentials: true
+      }
+    }).then(function (json) {
+      alert('上送的cookie：' + json.data.cookie)
+    })
+  })
+
+</script>
+
+</body>
+</html>
