@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flatten</title>
+</head>
+
+<body>
+    <script>
+        const unflattenedArr = [
+            {
+                "id": 1,
+                "text": "A",
+                "children": [
+                    {
+                        "id": 4,
+                        "text": "A1"
+                    },
+                    {
+                        "id": 5,
+                        "text": "A2"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "B",
+                "children": [
+                    {
+                        "id": 6,
+                        "text": "B1"
+                    },
+                    {
+                        "id": 7,
+                        "text": "B2",
+                        "children": [
+                            {
+                                "id": 8,
+                                "text": "B21"
+                            },
+                            {
+                                "id": 9,
+                                "text": "B22"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "C"
+            }
+        ]
+
+        const flatten = (arr, pid) => {
+            let unflattenedArr = JSON.parse(JSON.stringify(arr))
+            let ret = []
+            // 循环遍历
+            unflattenedArr.forEach(item => {
+                // 直接放置到存储数组中
+                let obj = {
+                    id: item.id,
+                    text: item.text
+                }
+                if (pid) obj.pid = pid
+                ret.push(obj)
+
+                // 如果存在子节点，还需要递归遍历
+                if (item.children) {
+                    let temp = flatten(item.children, item.id)
+                    // 将子节点数据合并到存储数组中
+                    ret = [...ret, ...temp]
+                }
+            })
+            return ret
+        }
+
+        let flattenedArr = flatten(unflattenedArr)
+        console.log('unflattenedArr:', unflattenedArr)
+        console.log('flattenedArr:', flattenedArr)
+
+    </script>
+</body>
+
+</html>
