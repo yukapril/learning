@@ -1,0 +1,44 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="block">
+  <p>1+1={{1+1}}</p>
+  <input type="text" [(value)]="inputValue">
+</div>
+
+<div class="block">
+  <button (click)="handleToggleClick($event)">show / hide</button>
+  <p *ngIf="isShow">I'm here!</p>
+</div>
+
+<div class="block">
+  <button class="btnbtn‐success" (click)="handleBtnClick($event)">点击事件</button>
+</div>
+
+<div class="block">
+  <p>循环</p>
+  <ul>
+    <li *ngFor="let item of list; let i = index">
+      {{i}}-{{item}}
+    </li>
+  </ul>
+</div>
+
+<div class="block">
+  <p>子组件通信</p>
+  <app-child [name]="childName" (callback)="handleChildCallback($event)"></app-child>
+  <button (click)="handleChildPropsClick()">改变子组件props</button><br>
+  <button (click)="handleChildFnClick()">调用子组件方法</button>
+</div>
+
+<div class="block">
+  <p>service通信</p>
+  <app-communicate></app-communicate>
+</div>
+
+<div class="block">
+  <p>组件投影</p>
+  <app-panel>
+      <p class="panel-title">this is title</p>
+      <p class="panel-content">this is content</p>
+  </app-panel>
+</div>
