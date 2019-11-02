@@ -14,7 +14,7 @@ class Counter extends React.PureComponent {
           -1
         </button>
       </div>
-    );
+    )
   }
 }
 
