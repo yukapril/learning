@@ -1,4 +1,4 @@
-const someReducer = (state = { count: 10 }, action) => {
+const globalReducer = (state = { count: 10 }, action) => {
   switch (action.type) {
     case "INCREMENT":
       return { ...state, count: state.count + action.payload }
@@ -9,4 +9,4 @@ const someReducer = (state = { count: 10 }, action) => {
   }
 }
 
-export default someReducer
+export default globalReducer

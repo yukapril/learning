@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-const someReducer = (state = { count: 10 }, action) => {
+const globalReducer = (state = { count: 10 }, action) => {
   switch (action.type) {
     case "INCREMENT":
       return { ...state, count: state.count + action.payload }
@@ -23,6 +23,6 @@ const otherReducer = (state = { count: 20 }, action) => {
 }
 
 export default combineReducers({
-  someReducer,
+  globalReducer,
   otherReducer
 })

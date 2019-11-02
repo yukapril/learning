@@ -3,10 +3,10 @@ import { connect } from "react-redux"
 
 class Counter extends React.PureComponent {
   render () {
-    const { someState, otherState, dispatch } = this.props
+    const { globalState, otherState, dispatch } = this.props
     return (
       <div>
-        <p>COUNT:{someState.count}</p>
+        <p>COUNT:{globalState.count}</p>
         <button onClick={() => dispatch({ type: "INCREMENT", payload: 1 })}>
           +1
         </button>
@@ -26,6 +26,6 @@ class Counter extends React.PureComponent {
 }
 
 const mapStateToProps = state => {
-  return ({ someState: state.someReducer, otherState: state.otherReducer })
+  return ({ globalState: state.globalReducer, otherState: state.otherReducer })
 }
 export default connect(mapStateToProps)(Counter)
